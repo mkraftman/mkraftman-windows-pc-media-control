@@ -220,7 +220,11 @@ class MkraftmanWindowsPCMediaControl extends HTMLElement {
     });
 
     shadow.getElementById("winBtn").addEventListener("click", () => {
+      // Double-toggle: key-down then key-up after 100ms
       this._sendUR("Relmtech.Keyboard", "toggle", { Values: [{ Value: "LWIN" }] });
+      setTimeout(() => {
+        this._sendUR("Relmtech.Keyboard", "toggle", { Values: [{ Value: "LWIN" }] });
+      }, 100);
     });
 
     this._built = true;
