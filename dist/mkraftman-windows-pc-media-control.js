@@ -210,13 +210,13 @@ class MkraftmanWindowsPCMediaControl extends HTMLElement {
     });
 
     shadow.getElementById("rw").addEventListener("click", () => {
-      this._sendUR("Relmtech.Keyboard", "stroke", { Values: [{ Value: "media_prev" }] });
+      this._sendUR("Relmtech.Keyboard", "toggle", { Values: [{ Value: "media_prev" }] });
     });
     shadow.getElementById("pp").addEventListener("click", () => {
-      this._sendUR("Relmtech.Keyboard", "stroke", { Values: [{ Value: "media_play_pause" }] });
+      this._sendUR("Relmtech.Keyboard", "toggle", { Values: [{ Value: "media_play_pause" }] });
     });
     shadow.getElementById("ff").addEventListener("click", () => {
-      this._sendUR("Relmtech.Keyboard", "stroke", { Values: [{ Value: "media_next" }] });
+      this._sendUR("Relmtech.Keyboard", "toggle", { Values: [{ Value: "media_next" }] });
     });
 
     shadow.getElementById("winBtn").addEventListener("click", () => {
